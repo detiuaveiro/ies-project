@@ -15,6 +15,7 @@ class Generator:
         self.cities.append({"name": "Aveiro", "district": "Aveiro", "lat": 40.6412, "lon": -8.65362})
         self.cities.append({"name": "Arouca", "district": "Aveiro", "lat": 40.9289, "lon": -8.24364})
         self.cities.append({"name": "Sintra", "district": "Lisboa", "lat": 38.7984, "lon": -9.38811})
+        self.cities.append({"name": "Guimarães", "district": "Braga", "lat": 41.4418, "lon": -8.29563})
         for i in range(len(self.cities)):
             self.cities[i]["id"] = i + 1
 

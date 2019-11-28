@@ -19,7 +19,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @Data
 public class City {
 
-    private @Id @GeneratedValue Long id;
+    //private @Id @GeneratedValue Long id;
+
+    private @Id Long id;
 
     private String name;
     private String district;

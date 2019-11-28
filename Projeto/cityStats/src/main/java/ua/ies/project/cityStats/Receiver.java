@@ -36,6 +36,7 @@ public class Receiver {
     private void process(byte[] in) throws InterruptedException, JsonProcessingException {
         ObjectMapper mapper = new ObjectMapper();
         Map<String,Object> map = mapper.readValue(new String(in), Map.class);
+        log.info("Message: " + new String(in));
         City newData = new City((String) map.get("name"), (String) map.get("district"),
                 (double) map.get("lat"), (double) map.get("lon"));
         newData.setCo((double) map.get("co"));
