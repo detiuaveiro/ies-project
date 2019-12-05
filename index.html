@@ -64,8 +64,11 @@
             <div class="row">
                 <div class="col-md-12">
                     <p></p>
-                    <label>Países
-                        <input list="countries" name="countries"/></label>
+                    <label>
+                        <p>Países
+                            <input list="countries" name="countries"/>
+                        </p>
+                    </label>
                     <datalist id="countries">
                         <option value="Afganistan">Afghanistan</option>
                         <option value="Albania">Albania</option>
@@ -317,7 +320,7 @@
                 </div>
                 <div class="col-md-4">
                     <p></p>
-                    <h5>Gases</h5>
+                    <h6>Gases</h6>
                     <!-- Default switch -->
                     <div class="custom-control custom-switch">
                         <input type="checkbox" class="custom-control-input" id="co">
@@ -328,34 +331,36 @@
                         <input type="checkbox" class="custom-control-input" id="co2">
                         <label class="custom-control-label" for="co2">CO2</label>
                     </div>
-                    <div class="custom-control custom-switch">
+                    <!--<div class="custom-control custom-switch">
                         <input type="checkbox" class="custom-control-input" id="no">
                         <label class="custom-control-label" for="no">NO</label>
-                    </div>
+                    </div>-->
                     <div class="custom-control custom-switch">
                         <input type="checkbox" class="custom-control-input" id="no2">
                         <label class="custom-control-label" for="no2">NO2</label>
                     </div>
-                    <div class="custom-control custom-switch">
+                    <!--<div class="custom-control custom-switch">
                         <input type="checkbox" class="custom-control-input" id="no3">
                         <label class="custom-control-label" for="no3">NO3</label>
-                    </div>
-                    <div class="custom-control custom-switch">
+                    </div>-->
+                    <!--<div class="custom-control custom-switch">
                         <input type="checkbox" class="custom-control-input" id="so">
                         <label class="custom-control-label" for="so">SO</label>
-                    </div>
+                    </div>-->
                     <div class="custom-control custom-switch">
                         <input type="checkbox" class="custom-control-input" id="so2">
                         <label class="custom-control-label" for="so2">SO2</label>
                     </div>
-                    <div class="custom-control custom-switch">
+                    <!--<div class="custom-control custom-switch">
                         <input type="checkbox" class="custom-control-input" id="so3">
                         <label class="custom-control-label" for="so3">SO3</label>
-                    </div>
+                    </div>-->
                     <div class="custom-control custom-switch">
                         <input type="checkbox" class="custom-control-input" id="o3">
                         <label class="custom-control-label" for="o3">O3</label>
                     </div>
+                    <br/>
+                    Outras componentes
                     <div class="custom-control custom-switch">
                         <input type="checkbox" class="custom-control-input" id="noise">
                         <label class="custom-control-label" for="noise">Noise</label>
@@ -371,7 +376,7 @@
                 </div>
                 <div class="col-md-8">
                     <p></p>
-                    <h5>Tabela</h5>
+                    <h6>Tabela</h6>
                     <table class="table table-sm table-hover">
                         <thead>
                         <tr>
@@ -428,13 +433,11 @@
     </div>
     <div class="row">
         <div class="col-sm-6">
-            <p></p>
-            <h5>Graph</h5>
-            <!--            <canvas id="chart_div" style="max-width: 500px;"></canvas>-->
+
+            <!--<canvas id="myChart" style="max-width: 500px;"></canvas>-->
         </div>
         <div class="col-sm-6">
             <p></p>
-            <h5>Warnings</h5>
             <div class="alert alert-warning" role="alert">
                 This is a warning alert—check it out!
             </div>
