@@ -1,73 +1,211 @@
 <!doctype html>
 <html lang="en">
-<head>
+  <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
-          integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
 
     <title>CityStats</title>
-</head>
-<body>
-<!--navbar-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="index.html">CityStats</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Estatísticas</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="about.html">Sobre</a>
-            </li>
-        </ul>
+  </head>
+  <body>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">CityStats</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Estatísticas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">Sobre</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+    
+    <div class="container">
+          <!-- Bootstrap Grid -->
+	<div class="row">
+      <div class="col-md-6">
+        search
+        <!-- Search form -->
+<!-- Search form -->
+<div class="md-form mt-0">
+    <!-- Search form -->
+<input class="form-control" type="text" placeholder="Search" aria-label="Search">
+  </div>
+      </div>
+      <div class="col-md-6">
+
+        <!--o mapa esta a desconfigurar a posicao dos divs-->
+
+         <!--Card-->
+    <div class="card card-cascade narrower">
+
+        <!--Card image-->
+        <div class="view view-cascade gradient-card-header blue-gradient">
+          <h5 class="mb-0">Mapa</h5>
+        </div>
+        <!--/Card image-->
+  
+        <!--Card content-->
+        <div class="card-body card-body-cascade text-center">
+  
+          <!--Google map-->
+          <div id="map-container-google-8" class="z-depth-1-half map-container-5" style="height: 300px">
+            <iframe src="https://maps.google.com/maps?q=Barcelona&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+  
+        </div>
+        <!--/.Card content-->
+  
+      </div>
+      <!--/.Card-->  
+      </div>
     </div>
-</nav>
-
-<!--left side-->
-<div class="container-fluid">
-    <!--gases-->
-    <div>
-        <ul>
-            <li>NO3</li>
-            <li>CO</li>
-            <li>CO2</li>
-            <li>Noise</li>
-            <li>Pain pH</li>
-            <li>Warning</li>
-        </ul>
+    <div class="row">
+      <div class="col-sm-2">
+        gases
+        <div class="switch">
+            <label>          
+              <input type="checkbox">
+              <span class="lever"></span> NO3
+            </label>
+          </div>
+        <div class="switch">
+            <label>          
+              <input type="checkbox">
+              <span class="lever"></span> CO
+            </label>
+          </div>
+          <div class="switch">
+              <label>          
+                <input type="checkbox">
+                <span class="lever"></span> CO2
+              </label>
+            </div>
+      </div>
+      <div class="col-sm-4">
+        tabela
+        <table class="table table-sm table-hover">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">2019</th>
+                <th scope="col">2018</th>
+                <th scope="col">2017</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">CO</th>
+                <td>0.5</td>
+                <td>0.54</td>
+                <td>0.45</td>
+              </tr>
+              <tr>
+                <th scope="row">CO2</th>
+                <td>0.65</td>
+                <td>0.55</td>
+                <td>0.45</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        graph
+        <!--<canvas id="myChart" style="max-width: 500px;"></canvas>-->
+      </div>
+      <div class="col-sm-6">
+        warning
+        <div class="alert alert-warning" role="alert">
+            This is a warning alert—check it out!
+          </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        1998<input type="range" class="custom-range" id="customRange1">2019
+      </div>
+      <div class="col-sm-6">
+        1998<input type="range" class="custom-range" id="customRange1">2019
+      </div>
+    </div>
     </div>
 
-    <!--tabela-->
-    <div>
-
-    </div>
-</div>
-
-<!--right side-->
-<div class="container-fluid">
-
-</div>
-
-
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-</body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
 </html>
+
+<!--
+css para mapa
+.map-container-5{
+overflow:hidden;
+padding-bottom:56.25%;
+position:relative;
+height:0;
+}
+.map-container-5 iframe{
+left:0;
+top:0;
+height:100%;
+width:100%;
+position:absolute;
+}
+-->
+
+<!-- javascript para grafico
+  var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+type: 'bar',
+data: {
+labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+datasets: [{
+label: '# of Votes',
+data: [12, 19, 3, 5, 2, 3],
+backgroundColor: [
+'rgba(255, 99, 132, 0.2)',
+'rgba(54, 162, 235, 0.2)',
+'rgba(255, 206, 86, 0.2)',
+'rgba(75, 192, 192, 0.2)',
+'rgba(153, 102, 255, 0.2)',
+'rgba(255, 159, 64, 0.2)'
+],
+borderColor: [
+'rgba(255,99,132,1)',
+'rgba(54, 162, 235, 1)',
+'rgba(255, 206, 86, 1)',
+'rgba(75, 192, 192, 1)',
+'rgba(153, 102, 255, 1)',
+'rgba(255, 159, 64, 1)'
+],
+borderWidth: 1
+}]
+},
+options: {
+scales: {
+yAxes: [{
+ticks: {
+beginAtZero: true
+}
+}]
+}
+}
+});
+
+-->
