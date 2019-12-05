@@ -12,6 +12,9 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
+    <!--    Google Charts-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
     <title>CityStats</title>
 
     <style>
@@ -54,13 +57,13 @@
     </div>
 </nav>
 
-<div class="container">
+<div class="container-fluid">
     <!-- Bootstrap Grid -->
     <div class="row">
         <div class="col-md-6">
             <div class="row">
                 <div class="col-md-12">
-                    search
+                    <p></p>
                     <!-- Search form -->
                     <div class="input-group md-form form-sm form-1 pl-0">
                         <div class="input-group-prepend">
@@ -72,7 +75,8 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    gases
+                    <p></p>
+                    <h5>Gases</h5>
                     <!-- Default switch -->
                     <div class="custom-control custom-switch">
                         <input type="checkbox" class="custom-control-input" id="co">
@@ -125,7 +129,8 @@
                     </div>
                 </div>
                 <div class="col-md-8">
-                    tabela
+                    <p></p>
+                    <h5>Tabela</h5>
                     <table class="table table-sm table-hover">
                         <thead>
                         <tr>
@@ -154,10 +159,8 @@
             </div>
         </div>
         <div class="col-md-6">
+            <p></p>
 
-            <!--o mapa esta a desconfigurar a posicao dos divs-->
-
-            <!--Card-->
             <div class="card card-cascade narrower">
 
                 <!--Card image-->
@@ -184,11 +187,13 @@
     </div>
     <div class="row">
         <div class="col-sm-6">
-            graph
-            <!--<canvas id="myChart" style="max-width: 500px;"></canvas>-->
+            <p></p>
+            <h5>Graph</h5>
+            <!--            <canvas id="chart_div" style="max-width: 500px;"></canvas>-->
         </div>
         <div class="col-sm-6">
-            warning
+            <p></p>
+            <h5>Warnings</h5>
             <div class="alert alert-warning" role="alert">
                 This is a warning alert—check it out!
             </div>
