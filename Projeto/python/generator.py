@@ -33,7 +33,7 @@ class Generator:
     def clock(self):
         connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
         channel = connection.channel()
-        channel.queue_declare(queue=QUEUE_NAME)
+        channel.queue_declare(queue=QUEUE_NAME, durable=True)
         while True:
             self.__generate()
             for city in self.cities:
