@@ -6,9 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -17,15 +15,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @ToString(exclude="id")
 @EqualsAndHashCode(exclude={"name", "district", "lat", "lon"})
 @Data
+@Table(name="cities")
 public class City {
 
     //private @Id @GeneratedValue Long id;
 
     private @Id Long id;
-
-    public int year;
-    public int month;
-
 
     private String name;
     private String district;
