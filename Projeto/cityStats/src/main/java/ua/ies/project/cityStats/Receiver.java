@@ -8,14 +8,17 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StopWatch;
 
-import java.util.Map;
+import java.util.*;
 
 @Slf4j
 @RabbitListener(queues = "cities")
 public class Receiver {
 
     @Autowired
-    private CityRepository repo;
+    private CityRepository cities;
+
+    @Autowired
+    private StatsRepository stats;
 
     private final int instance;
 
@@ -44,22 +47,60 @@ public class Receiver {
         newData.setSo2((double) map.get("so2"));
         newData.setNoise((double) map.get("noise"));
         newData.setRainPh((double) map.get("rainPh"));
-        updateCity(newData, Long.valueOf((Integer) map.get("id")));
+        Stat stat = createStat(newData);
+        updateStat(stat, Long.valueOf((Integer) map.get("id")));
+    }
+
+    private Stat createStat(City city){
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.HOUR_OF_DAY , 0);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+        calendar.set(Calendar.MILLISECOND, 0);
+        Date day = calendar.getTime();
+        return new Stat(day, city);
+    }
+
+    private Stat updateStat(Stat newData, long cityId){
+        long id = -1; //no stat has this id so if the id remains w/ this value, a new stat will be created
+        updateCity(newData.getCity(), cityId);
+        City city;  //use the instance of City that is already saved - it corresponds to the city of the current Stat
+        if (cities.findById(cityId).isPresent()){  //must be present bcs it was saved two lines before
+            city = cities.findById(cityId).get();
+            List<Stat> list = stats.findByDayAndCity(newData.getDay(), city);
+            if (!list.isEmpty())
+                id = list.get(0).getId(); //gets the id of the existing stat if there is any that corresponds to current city and day
+            return stats.findById(id).map(stat ->
+            {
+                stat.setDay(newData.getDay());
+                stat.setCity(city);
+                stat.updateStat(newData);
+                return stats.save(stat);
+            }).orElseGet(() -> //if not exists creates new one
+                    {
+                        newData.setCity(city);
+                        newData.updateStat(newData);
+                        return stats.save(newData);
+                    }
+                    );
+        }
+        log.info("Could not insert stat: nonexistent city");
+        return null;
     }
 
     private City updateCity(City newData, long id) {
-        return repo.findById(id).map(city ->
+        return cities.findById(id).map(city ->
         {
             city.setCo(newData.getCo());
             city.setCo2(newData.getCo2());
             city.setSo2(newData.getSo2());
             city.setNoise(newData.getNoise());
             city.setRainPh(newData.getRainPh());
-            return repo.save(city);
+            return cities.save(city);
         }).orElseGet(() -> // if not exists, creates new one
                 {
                     newData.setId(id);
-                    return repo.save(newData);
+                    return cities.save(newData);
                 }
         );
     }

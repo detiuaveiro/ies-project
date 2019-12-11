@@ -1,0 +1,13 @@
+/home/silveira/Documents/IES/Projeto/cityStats/src/main/java/ua/ies/project/cityStats/Receiver.java
+/home/silveira/Documents/IES/Projeto/cityStats/src/main/java/ua/ies/project/cityStats/City.java
+/home/silveira/Documents/IES/Projeto/cityStats/src/main/java/ua/ies/project/cityStats/StatsRepository.java
+/home/silveira/Documents/IES/Projeto/cityStats/src/main/java/ua/ies/project/cityStats/CityNotFoundAdvice.java
+/home/silveira/Documents/IES/Projeto/cityStats/src/main/java/ua/ies/project/cityStats/CityStatsApplication.java
+/home/silveira/Documents/IES/Projeto/cityStats/src/main/java/ua/ies/project/cityStats/AppConfig.java
+/home/silveira/Documents/IES/Projeto/cityStats/src/main/java/ua/ies/project/cityStats/CityNotFoundException.java
+/home/silveira/Documents/IES/Projeto/cityStats/src/main/java/ua/ies/project/cityStats/CityController.java
+/home/silveira/Documents/IES/Projeto/cityStats/src/main/java/ua/ies/project/cityStats/Stat.java
+/home/silveira/Documents/IES/Projeto/cityStats/src/main/java/ua/ies/project/cityStats/StatNotFoundAdvice.java
+/home/silveira/Documents/IES/Projeto/cityStats/src/main/java/ua/ies/project/cityStats/CityRepository.java
+/home/silveira/Documents/IES/Projeto/cityStats/src/main/java/ua/ies/project/cityStats/StatsController.java
+/home/silveira/Documents/IES/Projeto/cityStats/src/main/java/ua/ies/project/cityStats/StatNotFoundException.java
