@@ -96,6 +96,9 @@ public class Receiver {
             city.setSo2(newData.getSo2());
             city.setNoise(newData.getNoise());
             city.setRainPh(newData.getRainPh());
+            city.setNo2(newData.getNo2());
+            city.setO3(newData.getO3());
+            city.setTemperature(newData.getTemperature());
             return cities.save(city);
         }).orElseGet(() -> // if not exists, creates new one
                 {
