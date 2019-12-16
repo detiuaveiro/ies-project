@@ -27,8 +27,11 @@ class Generator:
             city["co"] = float(random.randint(0, 1200))  # bppv
             city["co2"] = float(random.randint(38, 420))  # ppm
             city["so2"] = float(random.randint(5, 35))  # micrg/m^3
+            city["no2"] = float(random.randint(0, 80)) #mol/m^2
+            city["o3"] = float(random.randint(11, 86)) # ppbv
             city["noise"] = float(random.randint(15, 45))  # db
             city["rainPh"] = float(random.randint(0, 7))
+            city["temperature"] = float(random.randint(-10, 40)) # celcius deg
 
     def clock(self):
         connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))

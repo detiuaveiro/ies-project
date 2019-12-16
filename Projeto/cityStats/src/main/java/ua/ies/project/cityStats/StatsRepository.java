@@ -9,5 +9,8 @@ import org.springframework.stereotype.Component;
 
 public interface StatsRepository extends JpaRepository<Stat, Long> {
     List<Stat> findByDay(Date day);
+
     List<Stat> findByDayAndCity(Date day, City city);
+
+    List<Stat> findAllByDay(Date day);
 }
