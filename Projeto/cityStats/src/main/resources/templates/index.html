@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
+          integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!--    Google Charts-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <title>CityStats</title>
+
+    <style>
+        .map-container-5 {
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            position: relative;
+            height: 0;
+        }
+
+        .map-container-5 iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+    </style>
+
+
+</head>
+<body>
+<!--navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">CityStats</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Estatísticas</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <!-- Bootstrap Grid -->
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <br/>
+                    <label>
+                        <p>Cidades
+                            <input list="cities" name="cities"/>
+                        </p>
+                    </label>
+                    <datalist id="cities">
+                        <option value="Aveiro">Aveiro</option>
+                        <option value="Arouca">Arouca</option>
+                        <option value="Beja">Beja</option>
+                        <option value="Braga">Braga</option>
+                        <option value="Guimarães">Guimarães</option>
+                        <option value="Bragança">Bragança</option>
+                        <option value="Castelo Branco">Castelo Branco</option>
+                        <option value="Coimbra">Coimbra</option>
+                        <option value="Évora">Évora</option>
+                        <option value="Guarda">Guarda</option>
+                        <option value="Faro">Faro</option>
+                        <option value="Leiria">Leiria</option>
+                        <option value="Lisboa">Lisboa</option>
+                        <option value="Sintra">Sintra</option>
+                        <option value="Portalegre">Portalegre</option>
+                        <option value="Porto">Porto</option>
+                        <option value="Setúbal">Setúbal</option>
+                        <option value="Santarém">Santarém</option>
+                        <option value="Viana do Castelo">Viana do Castelo</option>
+                        <option value="Vila Real">Vila Real</option>
+                        <option value="Viseu">Viseu</option>
+                    </datalist>
+                </div>
+                <div class="col-md-4">
+                    <p></p>
+                    <h6>Gases</h6>
+                    <!-- Default switch -->
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="co">
+                        <label class="custom-control-label" for="co">CO</label>
+                    </div>
+                    <!-- Default switch -->
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="co2">
+                        <label class="custom-control-label" for="co2">CO2</label>
+                    </div>
+                    <!--<div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="no">
+                        <label class="custom-control-label" for="no">NO</label>
+                    </div>-->
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="no2">
+                        <label class="custom-control-label" for="no2">NO2</label>
+                    </div>
+                    <!--<div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="no3">
+                        <label class="custom-control-label" for="no3">NO3</label>
+                    </div>-->
+                    <!--<div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="so">
+                        <label class="custom-control-label" for="so">SO</label>
+                    </div>-->
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="so2">
+                        <label class="custom-control-label" for="so2">SO2</label>
+                    </div>
+                    <!--<div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="so3">
+                        <label class="custom-control-label" for="so3">SO3</label>
+                    </div>-->
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="o3">
+                        <label class="custom-control-label" for="o3">O3</label>
+                    </div>
+                    <br/>
+                    Outras componentes
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="noise">
+                        <label class="custom-control-label" for="noise">Noise</label>
+                    </div>
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="rain">
+                        <label class="custom-control-label" for="rain">Rain pH</label>
+                    </div>
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="temp">
+                        <label class="custom-control-label" for="temp">Temperature</label>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <p></p>
+                    <h6>Tabela</h6>
+                    <table class="table table-sm table-hover">
+                        <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">2019</th>
+                            <th scope="col">2018</th>
+                            <th scope="col">2017</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">CO</th>
+                            <td>0.21</td>
+                            <td>0.54</td>
+                            <td>0.45</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">CO2</th>
+                            <td>0.65</td>
+                            <td>0.55</td>
+                            <td>0.45</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <p></p>
+
+            <div class="card card-cascade narrower">
+
+                <!--Card image-->
+                <div class="view view-cascade gradient-card-header blue-gradient">
+                    <h5 class="mb-0">Mapa</h5>
+                </div>
+                <!--/Card image-->
+
+                <!--Card content-->
+                <div class="card-body card-body-cascade text-center">
+
+                    <!--Google map-->
+                    <div id="map-container-google-8" class="z-depth-1-half map-container-5" style="height: 300px">
+                        <iframe src="https://maps.google.com/maps?q=Aveiro&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+                <!--/.Card content-->
+
+            </div>
+            <!--/.Card-->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+
+            <!--<canvas id="myChart" style="max-width: 500px;"></canvas>-->
+        </div>
+        <div class="col-sm-6">
+            <p></p>
+            <div class="alert alert-warning" role="alert">
+                This is a warning alert—check it out!
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-1" style="text-align: center">1998</div>
+        <div class="col-sm-4">
+            <input type="range" class="custom-range" id="customRange1">
+        </div>
+        <div class="col-sm-1" style="text-align: center">2019</div>
+        <div class="col-sm-1" style="text-align: center">1998</div>
+        <div class="col-sm-4">
+            <input type="range" class="custom-range" id="customRange2">
+        </div>
+        <div class="col-sm-1" style="text-align: center">2019</div>
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!--
+css para mapa
+.map-container-5{
+overflow:hidden;
+padding-bottom:56.25%;
+position:relative;
+height:0;
+}
+.map-container-5 iframe{
+left:0;
+top:0;
+height:100%;
+width:100%;
+position:absolute;
+}
+-->
+
+<!-- javascript para grafico
+  var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+type: 'bar',
+data: {
+labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+datasets: [{
+label: '# of Votes',
+data: [12, 19, 3, 5, 2, 3],
+backgroundColor: [
+'rgba(255, 99, 132, 0.2)',
+'rgba(54, 162, 235, 0.2)',
+'rgba(255, 206, 86, 0.2)',
+'rgba(75, 192, 192, 0.2)',
+'rgba(153, 102, 255, 0.2)',
+'rgba(255, 159, 64, 0.2)'
+],
+borderColor: [
+'rgba(255,99,132,1)',
+'rgba(54, 162, 235, 1)',
+'rgba(255, 206, 86, 1)',
+'rgba(75, 192, 192, 1)',
+'rgba(153, 102, 255, 1)',
+'rgba(255, 159, 64, 1)'
+],
+borderWidth: 1
+}]
+},
+options: {
+scales: {
+yAxes: [{
+ticks: {
+beginAtZero: true
+}
+}]
+}
+}
+});
+
+-->

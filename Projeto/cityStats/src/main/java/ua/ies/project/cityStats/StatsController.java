@@ -1,12 +1,9 @@
 package ua.ies.project.cityStats;
 
-<<<<<<<HEAD
-        =======
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
->>>>>>>branch
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,11 +45,6 @@ public class StatsController {
     }
 
     // Single Item
-
-    @GetMapping("/stats/{id}")
-    private Stat getByid(@PathVariable Long id) {
-        return repo.findById(id).orElseThrow(() -> new StatNotFoundException(id));
-    }
 
     @GetMapping("/stats/day/{day}")
     private List<Stat> getByDate(@PathVariable String day) throws ParseException {
