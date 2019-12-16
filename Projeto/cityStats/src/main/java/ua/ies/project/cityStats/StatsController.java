@@ -48,8 +48,7 @@ public class StatsController {
 
     @GetMapping("/stats/day/{day}")
     private List<Stat> getByDate(@PathVariable String day) throws ParseException {
-        List<Stat> stats = repo.findAllByDay(new SimpleDateFormat("yyyy-MM-dd").parse(day));
-        return stats;
+        return repo.findAllByDay(new SimpleDateFormat("yyyy-MM-dd").parse(day));
     }
 
     //by each of the variables

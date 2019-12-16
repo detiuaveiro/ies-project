@@ -50,6 +50,9 @@
             <li class="nav-item active">
                 <a class="nav-link" href="#">Estatísticas</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">Sobre nós</a>
+            </li>
         </ul>
     </div>
 </nav>
@@ -66,28 +69,8 @@
                             <input list="cities" name="cities"/>
                         </p>
                     </label>
-                    <datalist id="cities">
-                        <option value="Aveiro">Aveiro</option>
-                        <option value="Arouca">Arouca</option>
-                        <option value="Beja">Beja</option>
-                        <option value="Braga">Braga</option>
-                        <option value="Guimarães">Guimarães</option>
-                        <option value="Bragança">Bragança</option>
-                        <option value="Castelo Branco">Castelo Branco</option>
-                        <option value="Coimbra">Coimbra</option>
-                        <option value="Évora">Évora</option>
-                        <option value="Guarda">Guarda</option>
-                        <option value="Faro">Faro</option>
-                        <option value="Leiria">Leiria</option>
-                        <option value="Lisboa">Lisboa</option>
-                        <option value="Sintra">Sintra</option>
-                        <option value="Portalegre">Portalegre</option>
-                        <option value="Porto">Porto</option>
-                        <option value="Setúbal">Setúbal</option>
-                        <option value="Santarém">Santarém</option>
-                        <option value="Viana do Castelo">Viana do Castelo</option>
-                        <option value="Vila Real">Vila Real</option>
-                        <option value="Viseu">Viseu</option>
+                    <datalist id="cities" th:each="city: ${'cities'}">
+                        <option th:text="${'city.name'}" th:value="${'city.name'}"></option>
                     </datalist>
                 </div>
                 <div class="col-md-4">

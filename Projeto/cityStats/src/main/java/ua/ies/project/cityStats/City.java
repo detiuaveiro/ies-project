@@ -18,8 +18,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @Table(name="cities")
 public class City {
 
-    //private @Id @GeneratedValue Long id;
-
     private @Id Long id;
 
     private String name;
