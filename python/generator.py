@@ -5,7 +5,7 @@ import time
 
 import os
 
-connection = pika.BlockingConnection(pika.ConnectionParameters('deti-engsoft-09.ua.pt'))
+connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
 channel = connection.channel
 
 QUEUE_NAME = "cities"
@@ -34,7 +34,7 @@ class Generator:
             city["temperature"] = float(random.randint(-10, 40)) # celcius deg
 
     def clock(self):
-        connection = pika.BlockingConnection(pika.ConnectionParameters('deti-engsoft-09.ua.pt'))
+        connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
         channel = connection.channel()
         channel.queue_declare(queue=QUEUE_NAME, durable=True)
         while True:

@@ -21,6 +21,9 @@ public class StatsController {
     @Autowired
     private StatsRepository repo;
 
+    @Autowired
+    private CityRepository cityRepo;
+
     public StatsController(StatsRepository repo) {
         this.repo = repo;
     }
@@ -37,18 +40,39 @@ public class StatsController {
         return repo.save(newStat);
     }
 
-    // Single Item
-
     @GetMapping("/stats/{id}")
     private Stat getByid(@PathVariable Long id) {
         return repo.findById(id).orElseThrow(() -> new StatNotFoundException(id));
     }
 
-    // Single Item
-
     @GetMapping("/stats/day/{day}")
     private List<Stat> getByDate(@PathVariable String day) throws ParseException {
-        return repo.findAllByDay(new SimpleDateFormat("yyyy-MM-dd").parse(day));
+        return repo.findByDay(new SimpleDateFormat("yyyy-MM-dd").parse(day));
+    }
+
+    @GetMapping("/stats/city/{id}")
+    private List<Stat> getByCity(@PathVariable Long id) {
+        City city = new City();
+        city.setId(id);
+        return repo.findByCity(city);
+    }
+
+    @GetMapping("/stats/day/{date}/city/{cityid}")
+    private Stat getByDateAndCity(@PathVariable String date,
+                                  @PathVariable Long cityid) throws  ParseException {
+        Date day = new SimpleDateFormat("yyyy-MM-dd").parse(date);
+        City city = new City();
+        city.setId(cityid);
+        return repo.findByDayAndCity(day, city);
+    }
+
+    @GetMapping("/stats/city/{name}/district/{district}")
+    private List<Stat> findByNameAndDistrict(@PathVariable String name,
+                                             @PathVariable String district){
+        List<City> cities = cityRepo.findByNameAndDistrict(name, district);
+        if (cities.size() != 1 ) return null;
+        City city = cities.get(0);
+        return repo.findByCity(city);
     }
 
     //by each of the variables

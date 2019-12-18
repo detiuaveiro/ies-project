@@ -47,6 +47,9 @@ public class Receiver {
         newData.setSo2((double) map.get("so2"));
         newData.setNoise((double) map.get("noise"));
         newData.setRainPh((double) map.get("rainPh"));
+        newData.setO3((double) map.get("o3"));
+        newData.setNo2((double) map.get("no2"));
+        newData.setTemperature((double) map.get("temperature"));
         Stat stat = createStat(newData);
         updateStat(stat, Long.valueOf((Integer) map.get("id")));
     }
@@ -67,7 +70,7 @@ public class Receiver {
         City city;  //use the instance of City that is already saved - it corresponds to the city of the current Stat
         if (cities.findById(cityId).isPresent()){  //must be present bcs it was saved two lines before
             city = cities.findById(cityId).get();
-            List<Stat> list = stats.findByDayAndCity(newData.getDay(), city);
+            List<Stat> list = stats.findAllByDayAndCity(newData.getDay(), city);
             if (!list.isEmpty())
                 id = list.get(0).getId(); //gets the id of the existing stat if there is any that corresponds to current city and day
             return stats.findById(id).map(stat ->

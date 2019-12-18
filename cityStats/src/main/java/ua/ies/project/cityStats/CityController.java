@@ -61,6 +61,9 @@ public class CityController {
             city.setSo2(newCity.getSo2());
             city.setNoise(newCity.getNoise());
             city.setRainPh(newCity.getRainPh());
+            city.setO3(newCity.getO3());
+            city.setNo2(newCity.getNo2());
+            city.setTemperature(newCity.getTemperature());
             return repo.save(city);
         }).orElseGet(() -> // if not exists, creates new one
                 {
