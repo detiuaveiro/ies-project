@@ -46,6 +46,8 @@ services:
     build: .
     ports:
       - 8080:8080
+    expose:
+      - '8080'
     networks:
       citystats_default:
         ipv4_address: 172.23.0.3
