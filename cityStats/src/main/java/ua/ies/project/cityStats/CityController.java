@@ -19,8 +19,7 @@ public class CityController {
     // Aggregate root
 
     @GetMapping("/cities")
-    public List<City> all(Model model) {
-        model.addAttribute("c", repo.findAll());
+    public List<City> all() {
         return repo.findAll();
     }
 
