@@ -138,7 +138,21 @@
       <option name="project" value="LOCAL" />
       <updated>1579923833431</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="...">
+      <created>1579923908077</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1579923908077</updated>
+    </task>
+    <task id="LOCAL-00010" summary="...">
+      <created>1579923992620</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1579923992620</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -159,15 +173,19 @@
     </state>
     <state x="141" y="80" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1366.768/0.27.1366.741@0.27.1366.741" timestamp="1576287000276" />
     <state x="2061" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1576209289112" />
+    <state x="2286" y="133" width="624" height="534" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1579924069028">
+      <screen x="1920" y="0" width="1366" height="768" />
+    </state>
+    <state x="2286" y="133" width="624" height="534" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.27.1920.1053/1920.0.1366.768@1920.0.1366.768" timestamp="1579924069028" />
     <state x="2288" y="120" width="619" height="560" key="#docker-compose.yml:_Compose_Deployment" timestamp="1576628152867">
       <screen x="1920" y="0" width="1366" height="768" />
     </state>
     <state x="2288" y="120" width="619" height="560" key="#docker-compose.yml:_Compose_Deployment/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1576628152867" />
-    <state x="2211" y="27" width="773" height="741" key="CommitChangelistDialog2" timestamp="1579923907966">
+    <state x="2211" y="27" width="773" height="741" key="CommitChangelistDialog2" timestamp="1579923992520">
       <screen x="1920" y="0" width="1366" height="768" />
     </state>
     <state x="291" y="27" width="773" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1576758914986" />
-    <state x="2211" y="27" width="773" height="741" key="CommitChangelistDialog2/0.27.1920.1053/1920.0.1366.768@1920.0.1366.768" timestamp="1579923907966" />
+    <state x="2211" y="27" width="773" height="741" key="CommitChangelistDialog2/0.27.1920.1053/1920.0.1366.768@1920.0.1366.768" timestamp="1579923992520" />
     <state x="466" y="180" width="424" height="490" key="FileChooserDialogImpl" timestamp="1576758837559">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -205,10 +223,10 @@
     <state width="1318" height="76" key="GridCell.Tab.0.right/0.27.3286.1053@0.27.3286.1053" timestamp="1576809910296" />
     <state width="1318" height="2" key="GridCell.Tab.0.right/1920.0.1366.768/0.27.1366.741@0.27.1366.741" timestamp="1576297296756" />
     <state width="1318" height="15" key="GridCell.Tab.0.right/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1576643850329" />
-    <state x="2198" y="133" width="800" height="534" key="Vcs.Push.Dialog.v2" timestamp="1579923949106">
+    <state x="2198" y="133" width="800" height="534" key="Vcs.Push.Dialog.v2" timestamp="1579923996694">
       <screen x="1920" y="0" width="1366" height="768" />
     </state>
-    <state x="2198" y="133" width="800" height="534" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1366.768@1920.0.1366.768" timestamp="1579923949106" />
+    <state x="2198" y="133" width="800" height="534" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1366.768@1920.0.1366.768" timestamp="1579923996694" />
     <state x="2257" y="218" key="com.intellij.ide.util.TipDialog" timestamp="1579724313856">
       <screen x="1920" y="0" width="1366" height="768" />
     </state>
