@@ -131,11 +131,11 @@
       <screen x="1920" y="0" width="1366" height="768" />
     </state>
     <state x="2288" y="120" width="619" height="560" key="#docker-compose.yml:_Compose_Deployment/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1576628152867" />
-    <state x="2211" y="27" width="773" height="741" key="CommitChangelistDialog2" timestamp="1579923552316">
+    <state x="2211" y="27" width="773" height="741" key="CommitChangelistDialog2" timestamp="1579923778459">
       <screen x="1920" y="0" width="1366" height="768" />
     </state>
     <state x="291" y="27" width="773" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1576758914986" />
-    <state x="2211" y="27" width="773" height="741" key="CommitChangelistDialog2/0.27.1920.1053/1920.0.1366.768@1920.0.1366.768" timestamp="1579923552316" />
+    <state x="2211" y="27" width="773" height="741" key="CommitChangelistDialog2/0.27.1920.1053/1920.0.1366.768@1920.0.1366.768" timestamp="1579923778459" />
     <state x="466" y="180" width="424" height="490" key="FileChooserDialogImpl" timestamp="1576758837559">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -173,6 +173,10 @@
     <state width="1318" height="76" key="GridCell.Tab.0.right/0.27.3286.1053@0.27.3286.1053" timestamp="1576809910296" />
     <state width="1318" height="2" key="GridCell.Tab.0.right/1920.0.1366.768/0.27.1366.741@0.27.1366.741" timestamp="1576297296756" />
     <state width="1318" height="15" key="GridCell.Tab.0.right/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1576643850329" />
+    <state x="2198" y="133" width="800" height="534" key="Vcs.Push.Dialog.v2" timestamp="1579923732283">
+      <screen x="1920" y="0" width="1366" height="768" />
+    </state>
+    <state x="2198" y="133" width="800" height="534" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1366.768@1920.0.1366.768" timestamp="1579923732283" />
     <state x="2257" y="218" key="com.intellij.ide.util.TipDialog" timestamp="1579724313856">
       <screen x="1920" y="0" width="1366" height="768" />
     </state>
