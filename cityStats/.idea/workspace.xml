@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6624111d-3c0a-40a6-a6ec-404f2685d98f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_2_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_11_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_11_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cityStats.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cityStats.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cityStats-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/cityStats-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cityStats-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/cityStats-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ua.ies.project.cityStats.CityStatsApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ua.ies.project.cityStats.CityStatsApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ua.ies.project.cityStats.CityStatsApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ua.ies.project.cityStats.CityStatsApplicationTests.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +95,19 @@
       <option name="presentableId" value="Default" />
       <updated>1576152892512</updated>
     </task>
+    <task id="LOCAL-00001" summary="...">
+      <created>1576758915678</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1576758915678</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="..." />
+    <option name="LAST_COMMIT_MESSAGE" value="..." />
   </component>
   <component name="WindowStateProjectService">
     <state x="2198" y="59" width="800" height="683" key="#Project_Structure" timestamp="1576642652800">
@@ -108,34 +132,43 @@
     </state>
     <state x="466" y="180" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1576758837559" />
     <state x="466" y="180" width="424" height="490" key="FileChooserDialogImpl/1920.0.1366.768/0.27.1366.741@0.27.1366.741" timestamp="1576286974438" />
-    <state width="1318" height="15" key="GridCell.Tab.0.bottom" timestamp="1576643850329">
+    <state width="1318" height="347" key="GridCell.Tab.0.bottom" timestamp="1579922471116">
       <screen x="1920" y="0" width="1366" height="768" />
     </state>
     <state width="1318" height="317" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1576511319572" />
+    <state width="1318" height="347" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1366.768@1920.0.1366.768" timestamp="1579922471116" />
+    <state width="1318" height="76" key="GridCell.Tab.0.bottom/0.27.3286.1053@0.27.3286.1053" timestamp="1576809910297" />
     <state width="1318" height="2" key="GridCell.Tab.0.bottom/1920.0.1366.768/0.27.1366.741@0.27.1366.741" timestamp="1576297296756" />
     <state width="1318" height="15" key="GridCell.Tab.0.bottom/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1576643850329" />
-    <state width="1318" height="15" key="GridCell.Tab.0.center" timestamp="1576643850329">
+    <state width="1318" height="347" key="GridCell.Tab.0.center" timestamp="1579922471115">
       <screen x="1920" y="0" width="1366" height="768" />
     </state>
     <state width="1318" height="317" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1576511319572" />
+    <state width="1318" height="347" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1366.768@1920.0.1366.768" timestamp="1579922471115" />
+    <state width="1318" height="76" key="GridCell.Tab.0.center/0.27.3286.1053@0.27.3286.1053" timestamp="1576809910296" />
     <state width="1318" height="2" key="GridCell.Tab.0.center/1920.0.1366.768/0.27.1366.741@0.27.1366.741" timestamp="1576297296755" />
     <state width="1318" height="15" key="GridCell.Tab.0.center/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1576643850329" />
-    <state width="1318" height="15" key="GridCell.Tab.0.left" timestamp="1576643850329">
+    <state width="1318" height="347" key="GridCell.Tab.0.left" timestamp="1579922471114">
       <screen x="1920" y="0" width="1366" height="768" />
     </state>
     <state width="1318" height="317" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1576511319572" />
+    <state width="1318" height="347" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1366.768@1920.0.1366.768" timestamp="1579922471114" />
+    <state width="1318" height="76" key="GridCell.Tab.0.left/0.27.3286.1053@0.27.3286.1053" timestamp="1576809910295" />
     <state width="1318" height="2" key="GridCell.Tab.0.left/1920.0.1366.768/0.27.1366.741@0.27.1366.741" timestamp="1576297296755" />
     <state width="1318" height="15" key="GridCell.Tab.0.left/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1576643850329" />
-    <state width="1318" height="15" key="GridCell.Tab.0.right" timestamp="1576643850329">
+    <state width="1318" height="347" key="GridCell.Tab.0.right" timestamp="1579922471116">
       <screen x="1920" y="0" width="1366" height="768" />
     </state>
     <state width="1318" height="317" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1576511319572" />
+    <state width="1318" height="347" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1366.768@1920.0.1366.768" timestamp="1579922471116" />
+    <state width="1318" height="76" key="GridCell.Tab.0.right/0.27.3286.1053@0.27.3286.1053" timestamp="1576809910296" />
     <state width="1318" height="2" key="GridCell.Tab.0.right/1920.0.1366.768/0.27.1366.741@0.27.1366.741" timestamp="1576297296756" />
     <state width="1318" height="15" key="GridCell.Tab.0.right/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1576643850329" />
-    <state x="337" y="237" key="com.intellij.ide.util.TipDialog" timestamp="1576756709902">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state x="2257" y="218" key="com.intellij.ide.util.TipDialog" timestamp="1579724313856">
+      <screen x="1920" y="0" width="1366" height="768" />
     </state>
     <state x="337" y="237" key="com.intellij.ide.util.TipDialog/0.27.1366.741@0.27.1366.741" timestamp="1576756709902" />
+    <state x="2257" y="218" key="com.intellij.ide.util.TipDialog/0.27.1920.1053/1920.0.1366.768@1920.0.1366.768" timestamp="1579724313856" />
     <state x="474" y="325" key="com.intellij.ide.util.TipDialog/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1576620699069" />
     <state x="2257" y="218" key="com.intellij.ide.util.TipDialog/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1576642449461" />
     <state x="2369" y="317" width="458" height="166" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576643222707">
@@ -146,9 +179,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="347" y="174" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1576470934074" />
-    <state x="2266" y="89" key="search.everywhere.popup" timestamp="1576277576154">
+    <state x="2266" y="89" key="search.everywhere.popup" timestamp="1579581929994">
       <screen x="1920" y="0" width="1366" height="768" />
     </state>
+    <state x="2266" y="89" key="search.everywhere.popup/0.27.1920.1053/1920.0.1366.768@1920.0.1366.768" timestamp="1579581929994" />
     <state x="2266" y="89" key="search.everywhere.popup/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1576277576154" />
   </component>
 </project>
