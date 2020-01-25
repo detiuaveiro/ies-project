@@ -21,39 +21,64 @@ public class StatsController {
     @Autowired
     private StatsRepository repo;
 
-    public StatsController(StatsRepository repo){
+    @Autowired
+    private CityRepository cityRepo;
+
+    public StatsController(StatsRepository repo) {
         this.repo = repo;
     }
 
     //Aggregate root
 
     @GetMapping("/stats")
-    private List<Stat> all(){
+    private List<Stat> all() {
         return repo.findAll();
     }
 
     @PostMapping("/stats")
-    private Stat newStat(@RequestBody Stat newStat){
+    private Stat newStat(@RequestBody Stat newStat) {
         return repo.save(newStat);
     }
 
-    // Single Item
-
     @GetMapping("/stats/{id}")
-    private Stat getByid(@PathVariable Long id){
+    private Stat getByid(@PathVariable Long id) {
         return repo.findById(id).orElseThrow(() -> new StatNotFoundException(id));
     }
 
     @GetMapping("/stats/day/{day}")
     private List<Stat> getByDate(@PathVariable String day) throws ParseException {
-        List<Stat> stats = repo.findAllByDay(new SimpleDateFormat("yyyy-MM-dd").parse(day));
-        return stats;
+        return repo.findByDay(new SimpleDateFormat("yyyy-MM-dd").parse(day));
+    }
+
+    @GetMapping("/stats/city/{id}")
+    private List<Stat> getByCity(@PathVariable Long id) {
+        City city = new City();
+        city.setId(id);
+        return repo.findByCity(city);
+    }
+
+    @GetMapping("/stats/day/{date}/city/{cityid}")
+    private Stat getByDateAndCity(@PathVariable String date,
+                                  @PathVariable Long cityid) throws  ParseException {
+        Date day = new SimpleDateFormat("yyyy-MM-dd").parse(date);
+        City city = new City();
+        city.setId(cityid);
+        return repo.findByDayAndCity(day, city);
+    }
+
+    @GetMapping("/stats/city/{name}/district/{district}")
+    private List<Stat> findByNameAndDistrict(@PathVariable String name,
+                                             @PathVariable String district){
+        List<City> cities = cityRepo.findByNameAndDistrict(name, district);
+        if (cities.size() != 1 ) return null;
+        City city = cities.get(0);
+        return repo.findByCity(city);
     }
 
     //by each of the variables
 
     @DeleteMapping("/stats/{id}")
-    private void deleteStat(@PathVariable Long id){
+    private void deleteStat(@PathVariable Long id) {
         repo.deleteById(id);
     }
 }
