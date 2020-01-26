@@ -1,0 +1,124 @@
+{
+    "cities": [
+        {
+            "name": "Aveiro",
+            "district": "Aveiro", 
+            "lat": 40.6412, 
+            "lon": -8.65362
+        },
+        {
+            "name": "Arouca", 
+            "district": "Aveiro", 
+            "lat": 40.9289, 
+            "lon": -8.24364
+        },
+        {
+            "name": "Beja", 
+            "district": "Beja", 
+            "lat": 38.0223555, 
+            "lon": -7.888627
+        },
+        {
+            "name": "Braga", 
+            "district": "Braga", 
+            "lat": 41.5473338, 
+            "lon": -8.4464408
+        },
+        {
+            "name": "Guimarães", 
+            "district": "Braga", 
+            "lat": 41.4418, 
+            "lon": -8.29563
+        },
+        {
+            "name": "Bragança", 
+            "district": "Bragança", 
+            "lat": 41.8115472, 
+            "lon": -6.7485317
+        },
+        {
+            "name": "Castelo Branco", 
+            "district": "Castelo Branco", 
+            "lat": 39.8115167, 
+            "lon": -7.463107
+        },
+        {
+            "name": "Coimbra", 
+            "district": "Coimbra", 
+            "lat": 40.2286755, 
+            "lon": -8.5563584
+        },
+        {
+            "name": "Évora", 
+            "district": "Évora", 
+            "lat": 38.5698202,
+            "lon": -7.9110091
+        },
+        {
+            "name": "Faro", 
+            "district": "Faro", 
+            "lat": 37.0178051,
+            "lon": -7.9049115
+        },
+        {
+            "name": "Leiria", 
+            "district": "Leiria", 
+            "lat": 39.7540615,
+            "lon": -8.8059587
+        },
+        {
+            "name": "Lisboa", 
+            "district": "Lisboa", 
+            "lat": 38.7437396, 
+            "lon": -9.2302438
+        },
+        {
+            "name": "Sintra", 
+            "district": "Lisboa", 
+            "lat": 38.7984, 
+            "lon": -9.38811
+        },
+        {
+            "name": "Portalegre", 
+            "district": "Portalegre", 
+            "lat": 39.2889408,
+            "lon": -7.4329957
+        },
+        {
+            "name": "Porto", 
+            "district": "Porto", 
+            "lat": 41.1621429,
+            "lon": -8.6219537
+        },
+        {
+            "name": "Santarém", 
+            "district": "Santarém", 
+            "lat": 39.2278287,
+            "lon": -8.6869843
+        },
+        {
+            "name": "Setúbal", 
+            "district": "Setúbal", 
+            "lat": 38.5173307,
+            "lon": -8.8949277
+        },
+        {
+            "name": "Viana do Castelo", 
+            "district": "Viana do Castelo", 
+            "lat": 41.3018543, 
+            "lon": -7.7271047
+        },
+        {
+            "name": "Vila Real", 
+            "district": "Vila Real", 
+            "lat": 39.2278287,
+            "lon": -8.6869843
+        },
+        {
+            "name": "Viseu", 
+            "district": "Viseu", 
+            "lat": 40.6699125, 
+            "lon": -7.8955377
+        }
+    ]
+}
