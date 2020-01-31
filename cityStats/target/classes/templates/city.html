@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
+          integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!--    Google Charts-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <title>CityStats</title>
+
+</head>
+<body>
+
+<div class="col-md-8">
+    <table class="table table-sm table-hover" id="cities">
+        <thead>
+        <tr>
+            <th>Time</th>
+            <th>CO</th>
+            <th>CO2</th>
+            <th>SO2</th>
+            <th>O3</th>
+            <th>NO2</th>
+            <th>Noise</th>
+            <th>Rain pH</th>
+            <th>Temperature</th>
+        </tr>
+        </thead>
+        <tbody>
+        <th:block >
+            <h1 th:text="${city.getName()}"></h1>
+            <h3 th:text="${city.getDistrict()}"></h3>
+        </th:block>
+        <th:block th:each="stat : ${stats}">
+            <tr th:if="${stats.empty}">
+                <td colspan="9">No stats found for that location!</td>
+            </tr>
+            <div>
+                <tr>
+                    <td th:text="${stat.getDay()}"></td>
+                    <td th:text="${stat.getCo()}"></td>
+                    <td th:text="${stat.getCo2()}"></td>
+                    <td th:text="${stat.getSo2()}"></td>
+                    <td th:text="${stat.getO3()}"></td>
+                    <td th:text="${stat.getNo2()}"></td>
+                    <td th:text="${stat.getNoise()}"></td>
+                    <td th:text="${stat.getRainPh()}"></td>
+                    <td th:text="${stat.getTemperature()}"></td>
+                </tr>
+            </div>
+        </th:block>
+        </tbody>
+    </table>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>

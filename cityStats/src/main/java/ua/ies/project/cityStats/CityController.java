@@ -2,6 +2,9 @@ package ua.ies.project.cityStats;
 
 import java.util.List;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -19,12 +22,14 @@ public class CityController {
     // Aggregate root
 
     @GetMapping("/cities")
-    public List<City> all() {
+    public List<City> all(Model model) {
+        model.addAttribute("cities", repo.findAll());
         return repo.findAll();
     }
 
     @PostMapping("/cities")
-    public City newCity(@RequestBody City newCity) {
+    public City newCity(@RequestBody City newCity, Model model) {
+        model.addAttribute("cities", repo.findAll());
         return repo.save(newCity);
     }
 

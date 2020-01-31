@@ -2,6 +2,7 @@ ua/ies/project/cityStats/City.class
 ua/ies/project/cityStats/StatNotFoundException.class
 ua/ies/project/cityStats/StatNotFoundAdvice.class
 ua/ies/project/cityStats/StatsController.class
+ua/ies/project/cityStats/UIController.class
 ua/ies/project/cityStats/CityNotFoundAdvice.class
 ua/ies/project/cityStats/AppConfig$ReceiverConfig.class
 ua/ies/project/cityStats/Receiver.class
