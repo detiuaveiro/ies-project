@@ -42,9 +42,9 @@
 <div class="col-md-8">
     <!--<input th:id="distr_input" list="distr_list">-->
 
-    <datalist id="distr_list">
-        <th:block th:each="district : ${districts}">
-            <option th:text="${district}"></option>
+    <datalist id="distr_list" >
+        <th:block th:each="district : ${districts}" >
+            <option th:text="${district}" ></option>
         </th:block>
     </datalist>
 
@@ -52,7 +52,7 @@
 
     <datalist id="cities_list">
         <th:block th:each="city : ${cities}">
-            <option th:text="${city.getName()}" th:attr="city_id = ${city.getId()}" th:href="/${city.getId()}"></option>
+            <option th:text="${city.getName()}" th:attr="city_id = ${city.getId()}"></option>
             <!--th:if="${city.getDistrict()} == ${distr}"-->
         </th:block>
     </datalist>
@@ -77,7 +77,9 @@
                 <td colspan="2">No cities</td>
             </tr>
             <tr>
-                <td th:text="${city.getName()}"></td>
+                <td>
+                    <a th:text="${city.getName()}" th:href="@{/{city.getId()}}"></a>
+                </td>
                 <td th:text="${city.getDistrict()}"></td>
                 <td th:text="${city.getCo()}"></td>
                 <td th:text="${city.getCo2()}"></td>
