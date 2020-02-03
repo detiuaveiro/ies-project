@@ -40,6 +40,11 @@ public class StatsController {
         return repo.save(newStat);
     }
 
+//    @PutMapping("/stats")
+//    private Stat updateStat(@RequestBody Stat updated) {
+//
+//    }
+
     @GetMapping("/stats/{id}")
     private Stat getByid(@PathVariable Long id) {
         return repo.findById(id).orElseThrow(() -> new StatNotFoundException(id));
@@ -73,6 +78,17 @@ public class StatsController {
         if (cities.size() != 1 ) return null;
         City city = cities.get(0);
         return repo.findByCity(city);
+    }
+
+    @GetMapping("/stats/city/{name}/district/{district}/{date}")
+    private Stat findByNameAndDistrictAndDate(@PathVariable String name,
+                                             @PathVariable String district, @PathVariable String date)
+            throws ParseException {
+        List<City> cities = cityRepo.findByNameAndDistrict(name, district);
+        if (cities.size() != 1 ) return null;
+        City city = cities.get(0);
+        Date day = new SimpleDateFormat("yyyy-MM-dd").parse(date);
+        return repo.findByDayAndCity(day, city);
     }
 
     //by each of the variables
