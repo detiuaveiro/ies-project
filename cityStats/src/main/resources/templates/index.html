@@ -21,7 +21,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="index.html">CityStats</a>
+    <a class="navbar-brand" th:href="@{/}">CityStats</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
             aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -30,16 +30,16 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Estatísticas</a>
+                <a class="nav-link" th:href="@{/}">Estatísticas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="about.html">Sobre nós</a>
+                <a class="nav-link" th:href="@{/about}">Sobre nós</a>
             </li>
         </ul>
     </div>
 </nav>
 <br>
-<div class="col-md-8">
+<div class="container">
     <form action="https://google.com">
         <input th:id="distr_input" list="distr_list">
 
@@ -57,8 +57,9 @@
                 <!--th:if="${city.getDistrict()} == ${distr}"-->
             </th:block>
         </datalist>
-        <input type="submit" value="Search"/>
+        <input type="submit" value="Search" class="btn btn-primary"/>
     </form>
+    <br>
     <table class="table table-sm table-hover" id="cities">
         <thead>
         <tr>

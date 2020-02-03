@@ -42,6 +42,11 @@ public class UIController {
         return "city.html";
     }
 
+    @GetMapping("/about")
+    public String about(Model model) {
+        return "about.html";
+    }
+
     private List<String> getAllDistricts(List<City> cities){
         List<String> districts = new ArrayList<>();
         for (City city: cities) {
