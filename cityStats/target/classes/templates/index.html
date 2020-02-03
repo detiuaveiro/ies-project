@@ -20,22 +20,45 @@
 </head>
 <body>
 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">CityStats</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Estatísticas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">Sobre nós</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<br>
 <div class="col-md-8">
-    <input th:id="distr_input" list="distr_list">
+    <form action="https://google.com">
+        <input th:id="distr_input" list="distr_list">
 
-    <datalist id="distr_list" >
-        <th:block th:each="district : ${districts}" >
-            <option th:text="${district}" ></option>
-        </th:block>
-    </datalist>
+        <datalist id="distr_list" >
+            <th:block th:each="district : ${districts}" >
+                <option th:text="${district}" ></option>
+            </th:block>
+        </datalist>
 
-    <input list="cities_list">
+        <input list="cities_list">
 
-    <datalist id="cities_list">
-        <th:block th:each="city : ${cities}">
-            <option th:text="${city.getName()}" th:attr="city_id = ${city.getId()}"></option><!--th:if="${city.getDistrict()} == ${distr}"-->
-        </th:block>
-    </datalist>
+        <datalist id="cities_list">
+            <th:block th:each="city : ${cities}">
+                <option th:text="${city.getName()}" th:attr="city_id = ${city.getId()}"></option>
+                <!--th:if="${city.getDistrict()} == ${distr}"-->
+            </th:block>
+        </datalist>
+        <input type="submit" value="Search"/>
+    </form>
     <table class="table table-sm table-hover" id="cities">
         <thead>
         <tr>
@@ -52,12 +75,12 @@
         </tr>
         </thead>
         <tbody>
-        <th:block th:each="city : ${cities}" >
+        <th:block th:each="city : ${cities}">
             <tr th:if="${cities.empty}">
                 <td colspan="2">No cities</td>
             </tr>
             <tr>
-                <td th:text="${city.getName()}" ></td>
+                <td th:text="${city.getName()}"></td>
                 <td th:text="${city.getDistrict()}"></td>
                 <td th:text="${city.getCo()}"></td>
                 <td th:text="${city.getCo2()}"></td>

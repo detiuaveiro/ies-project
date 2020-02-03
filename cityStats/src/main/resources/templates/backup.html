@@ -198,6 +198,26 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+<!--
+<form action="https://google.com">
+        <input th:id="distr_input" list="distr_list">
+
+        <datalist id="distr_list" >
+            <th:block th:each="district : ${districts}" >
+                <option th:text="${district}" ></option>
+            </th:block>
+        </datalist>
+
+        <input list="cities_list">
+
+        <datalist id="cities_list">
+            <th:block th:each="city : ${cities}">
+                <option th:text="${city.getName()}" th:attr="city_id = ${city.getId()}"></option>
+</th:block>
+</datalist>
+<input type="submit" value="Search"/>
+</form>
+-->
 </body>
 </html>
 
