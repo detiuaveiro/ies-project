@@ -1,12 +1,25 @@
 #!/bin/bash
 
-while getopts i option
+clean_install=false;
+daemon=false;
+
+while getopts id option
 do
   case "${option}" in
-  i) mvn clean install;;
+  i) clean_install=true;;
+  d) daemon=true;;
+  *) echo Invalid option!;;
 esac
 done
 
+if $clean_install ; then
+  mvn clean install;
+fi
 sudo docker-compose down;
 sudo docker image rm citystats_citystats;
-sudo docker-compose up -d;
+if $daemon ; then
+  sudo docker-compose up -d;
+else
+  sudo docker-compose up;
+fi
+

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.lang.management.GarbageCollectorMXBean;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 @Controller
@@ -29,6 +30,7 @@ public class UIController {
         List<City> citiesList = cities.findAll();
         model.addAttribute("cities", citiesList);
         model.addAttribute("districts", getAllDistricts(citiesList));
+        model.addAttribute("map", getAllCitiesMapped(citiesList));
         return "index.html";
     }
 
@@ -48,5 +50,17 @@ public class UIController {
                 districts.add(district);
         }
         return districts;
+    }
+
+    //get all cities divided by district
+    private HashMap<String, List<City>> getAllCitiesMapped(List<City> cities){
+        HashMap<String, List<City>> map = new HashMap<>();
+        for (City city : cities){
+            String district = city.getDistrict();
+            if (!map.containsKey(district))
+                map.put(district, new ArrayList<City>());
+            map.get(district).add(city);
+        }
+        return map;
     }
 }

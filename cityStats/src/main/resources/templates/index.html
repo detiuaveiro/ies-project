@@ -53,7 +53,7 @@
 
         <datalist id="cities_list">
             <th:block th:each="city : ${cities}">
-                <option th:text="${city.getName()}" th:attr="city_id = ${city.getId()}"></option>
+                <option th:if="${map.get(city.getDistrict()).contains(city)}" th:text="${city.getName()}" th:attr="city_id = ${city.getId()}"></option>
                 <!--th:if="${city.getDistrict()} == ${distr}"-->
             </th:block>
         </datalist>
@@ -81,7 +81,7 @@
             </tr>
             <tr>
                 <td>
-                    <a th:href="@{/{id}(id=${city.getId()})" th:text="${city.getName()}"></a>
+                    <a th:href="@{/{id}(id=${city.getId()})}" th:text="${city.getName()}"></a>
                 </td>
                 <td th:text="${city.getDistrict()}"></td>
                 <td th:text="${city.getCo()}"></td>
