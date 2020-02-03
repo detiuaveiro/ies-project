@@ -81,7 +81,7 @@
             </tr>
             <tr>
                 <td>
-                    <a th:text="${city.getName()}" th:href="@{/{city.getId()}}"></a>
+                    <a th:text="${city.getName()}" th:href="@{'/' + ${city.getId()}}"></a>
                 </td>
                 <td th:text="${city.getDistrict()}"></td>
                 <td th:text="${city.getCo()}"></td>
