@@ -80,7 +80,9 @@
                 <td colspan="2">No cities</td>
             </tr>
             <tr>
-                <td th:text="${city.getName()}"></td>
+                <td>
+                    <a th:href="@{/{id}(id=${city.getId()})" th:text="${city.getName()}"></a>
+                </td>
                 <td th:text="${city.getDistrict()}"></td>
                 <td th:text="${city.getCo()}"></td>
                 <td th:text="${city.getCo2()}"></td>
