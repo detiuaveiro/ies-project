@@ -21,7 +21,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="index.html">CityStats</a>
+    <a class="navbar-brand" href="/">CityStats</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
             aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -42,9 +42,9 @@
 <div class="col-md-8">
     <!--<input th:id="distr_input" list="distr_list">-->
 
-    <datalist id="distr_list" >
-        <th:block th:each="district : ${districts}" >
-            <option th:text="${district}" ></option>
+    <datalist id="distr_list">
+        <th:block th:each="district : ${districts}">
+            <option th:text="${district}"></option>
         </th:block>
     </datalist>
 
@@ -52,7 +52,7 @@
 
     <datalist id="cities_list">
         <th:block th:each="city : ${cities}">
-            <option th:text="${city.getName()}" th:attr="city_id = ${city.getId()}"></option>
+            <option th:text="${city.getName()}" th:attr="city_id = ${city.getId()}" th:href="/${city.getId()}"></option>
             <!--th:if="${city.getDistrict()} == ${distr}"-->
         </th:block>
     </datalist>
