@@ -36,6 +36,14 @@ services:
       - '5672:5672'
     expose:
       - '5672'
-  
+  citystats:
+    build: .
+    ports:
+      - 8080:8080
+    expose:
+      - '8080'
+    networks:
+      citystats_default:
+        ipv4_address: 172.23.0.3
 volumes:
   my-db:
