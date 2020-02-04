@@ -29,8 +29,6 @@ public class UIController {
     public String all(Model model){
         List<City> citiesList = cities.findAll();
         model.addAttribute("cities", citiesList);
-        model.addAttribute("districts", getAllDistricts(citiesList));
-        model.addAttribute("map", getAllCitiesMapped(citiesList));
         return "index.html";
     }
 
