@@ -28,25 +28,32 @@ This project was created for the pratical assignment of the class [Introduction 
 
 ## Architecture
 ### Architecture Diagram
-[img](img/sc)
+![img](./img/Architecture.png)
 
+## Usage
+### Generator
+
+To obtain the values from the cities, we used a python generator that generates random numbers for each variable. 
+To use this generator all you need is to run:
+```bash
+$ python3 python/generator.py
+``` 
+
+The program will wait 20 seconds after each city and will run until it's manually stopped with CTRL+C.
+
+### CityStats
+The file ``cityStats/dockerun.sh`` was created to run and deploy automatically to the server.
+
+```bash
+$ ./cityStats/dockerun.sh
+```
 
 ## Installation
 
 To use the python generator you need [pika](https://pika.readthedocs.io/en/stable/).
 
 ```bash
-pip install -r python/requirements.txt
-```
-
-## Usage
-
-```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+$ pip install -r python/requirements.txt
 ```
 
 ## Contributing
@@ -55,3 +62,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
