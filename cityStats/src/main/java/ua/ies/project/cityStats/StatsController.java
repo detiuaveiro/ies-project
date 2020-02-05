@@ -40,10 +40,26 @@ public class StatsController {
         return repo.save(newStat);
     }
 
-//    @PutMapping("/stats")
-//    private Stat updateStat(@RequestBody Stat updated) {
-//
-//    }
+    @PutMapping("/stats/{id}")
+    private Stat updateStat(@RequestBody Stat updated, @PathVariable Long id) {
+        return repo.findById(id).map(stat ->
+        {
+            stat.setCo(updated.getCo());
+            stat.setCo2(updated.getCo2());
+            stat.setSo2(updated.getSo2());
+            stat.setNoise(updated.getNoise());
+            stat.setRainPh(updated.getRainPh());
+            stat.setO3(updated.getO3());
+            stat.setNo2(updated.getNo2());
+            stat.setTemperature(updated.getTemperature());
+            return repo.save(stat);
+        }).orElseGet(() -> // if not exists, creates new one
+                {
+                    updated.setId(id);
+                    return repo.save(updated);
+                }
+        );
+    }
 
     @GetMapping("/stats/{id}")
     private Stat getByid(@PathVariable Long id) {
