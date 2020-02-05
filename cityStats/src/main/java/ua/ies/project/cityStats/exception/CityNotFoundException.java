@@ -1,4 +1,4 @@
-package ua.ies.project.cityStats;
+package ua.ies.project.cityStats.exception;
 
 public class CityNotFoundException extends RuntimeException {
 

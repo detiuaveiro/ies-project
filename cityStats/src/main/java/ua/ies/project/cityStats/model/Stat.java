@@ -1,4 +1,4 @@
-package ua.ies.project.cityStats;
+package ua.ies.project.cityStats.model;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.*;

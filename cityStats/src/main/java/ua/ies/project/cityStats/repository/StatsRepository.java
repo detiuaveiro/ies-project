@@ -1,11 +1,11 @@
-package ua.ies.project.cityStats;
+package ua.ies.project.cityStats.repository;
 
-import java.time.LocalDate;
 import java.util.List;
 import java.util.Date;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Component;
+import ua.ies.project.cityStats.model.City;
+import ua.ies.project.cityStats.model.Stat;
 
 public interface StatsRepository extends JpaRepository<Stat, Long> {
     List<Stat> findByDay(Date day);

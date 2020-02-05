@@ -1,12 +1,15 @@
-package ua.ies.project.cityStats;
+package ua.ies.project.cityStats.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import ua.ies.project.cityStats.repository.CityRepository;
+import ua.ies.project.cityStats.repository.StatsRepository;
+import ua.ies.project.cityStats.exception.StatNotFoundException;
+import ua.ies.project.cityStats.model.City;
 
-import java.lang.management.GarbageCollectorMXBean;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

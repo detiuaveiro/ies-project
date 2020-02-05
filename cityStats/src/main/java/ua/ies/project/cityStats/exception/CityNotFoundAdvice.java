@@ -1,4 +1,4 @@
-package ua.ies.project.cityStats;
+package ua.ies.project.cityStats.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ControllerAdvice
-public class StatNotFoundAdvice {
+public class CityNotFoundAdvice {
     @ResponseBody
-    @ExceptionHandler(StatNotFoundException.class)
+    @ExceptionHandler(CityNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public String statNotFoundHandler(StatNotFoundException e){
+    public String cityNotFoundHandler(CityNotFoundException e){
         return e.getMessage();
     }
 }
