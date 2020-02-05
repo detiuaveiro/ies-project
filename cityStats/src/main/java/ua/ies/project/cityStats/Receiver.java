@@ -7,6 +7,10 @@ import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StopWatch;
+import ua.ies.project.cityStats.model.City;
+import ua.ies.project.cityStats.model.Stat;
+import ua.ies.project.cityStats.repository.CityRepository;
+import ua.ies.project.cityStats.repository.StatsRepository;
 
 import java.util.*;
 

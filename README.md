@@ -48,6 +48,9 @@ The file ``cityStats/dockerun.sh`` was created to run and deploy automatically t
 $ ./cityStats/dockerun.sh
 ```
 
+To access the web application you need to access ``deti-engsoft-09.ua.pt:8080/``, 
+to access the API you need to access ``deti-engsoft-09.ua.pt:8080/api/v1/``
+
 ## Installation
 
 To use the python generator you need [pika](https://pika.readthedocs.io/en/stable/).
