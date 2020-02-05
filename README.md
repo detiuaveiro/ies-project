@@ -36,7 +36,7 @@ This project was created for the pratical assignment of the class [Introduction 
 To obtain the values from the cities, we used a python generator that generates random numbers for each variable. 
 To use this generator all you need is to run:
 ```bash
-$ python3 python/generator.py
+$ python3 generator/generator.py
 ``` 
 
 The program will wait 20 seconds after each city and will run until it's manually stopped with CTRL+C.
@@ -56,7 +56,7 @@ to access the API you need to access ``deti-engsoft-09.ua.pt:8080/api/v1/``
 To use the python generator you need [pika](https://pika.readthedocs.io/en/stable/).
 
 ```bash
-$ pip install -r python/requirements.txt
+$ pip install pika
 ```
 
 ## Contributing
